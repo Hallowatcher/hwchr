@@ -10,7 +10,7 @@ function compile(str, path) {
 }
 
 app.set("views", __dirname + "/views");
-app.set("view engine", "jade");
+app.set("view engine", "pug");
 app.use(stylus.middleware({
     src: __dirname + "/public",
     compile: compile
