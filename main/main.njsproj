@@ -33,8 +33,12 @@
     <Compile Include="app.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="views\index.jade" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="typings\globals\jade\" />
+    <Folder Include="views\" />
+    <Folder Include="public\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\express\" />
@@ -42,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="typings\globals\express\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\jade\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
