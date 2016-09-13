@@ -16,13 +16,92 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    width: 100%;
+    position: absolute;
+    max-width: 1600px;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    width: 600px;
+    flex-grow: 1;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+
+    #title {
+        font-size: 96px;
+    }
+
+    #line {
+        border-width: 0;
+        height: 1px;
+        background-color: white;
+        margin: 20px 0;
+    }
+
+    #links {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            display: inline;
+            padding: 5px;
+            font-size: 24px;
+
+            a {
+                text-decoration: none;
+                color: lightgray;
+                transition-duration: .2s;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
 }
 
 #footer {
     position: absolute;
+    bottom: 0;
     width: 100%;
     text-align: center;
-    bottom: 0;
+
+    #nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 80px;
+        margin-right: 20px;
+        font-size: 34px;
+
+        li {
+            margin: 0 30px;
+            display: inline;
+
+            a {
+                text-decoration: none;
+                color: @dark;
+                font-weight: 400;
+                transition-duration: .15s;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
 
     #logo {
         margin: 25px 0;
@@ -43,49 +122,4 @@ body {
             color: @dark;
         }
     }
-}
-
-#content {
-    width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    color: white;
-    .vertical-align;
-
-    #title {
-        font-size: 96px;
-    }
-
-    #line {
-        border-width: 0;
-        height: 1px;
-        background-color: white;
-        margin: 20px 0;
-    }
-
-    #links {
-        padding: 0;
-        margin: 20px 0;
-        list-style: none;
-
-        li {
-            display: inline;
-            padding: 5px;
-            font-size: 24px;
-
-            a {
-                text-decoration: none;
-                color: white;
-            }
-        }
-    }
-}
-
-// Vertical align
-.vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
