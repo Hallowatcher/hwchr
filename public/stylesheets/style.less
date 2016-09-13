@@ -1,5 +1,8 @@
 ﻿@import url("https://fonts.googleapis.com/css?family=Lato:300,600");
 
+// Colors
+@dark: #9B9B9B;
+
 html, body {
     width: 100%;
     height: 100%;
@@ -15,45 +18,29 @@ body {
     background-position: center;
 }
 
-@keyframes to-red {
-    0% {
-        color: white;
-        border-color: white;
-    }
-
-    50% {
-        color: #B5CFFF;
-        border-color: #B5CFFF;
-    }
-
-    100% {
-        color: white;
-        border-color: white;
-    }
-}
-
 #header {
     position: absolute;
     width: 100%;
     text-align: center;
+    bottom: 0;
 
     #logo {
         margin: 25px 0;
         background: none;
-        border: 2px solid white;
+        border: 2px solid @dark;
         padding: 10px;
         font-size: 24px;
         letter-spacing: 6px;
-        color: white;
+        color: @dark;
         transition-duration: .15s;
-        animation: to-red 5s infinite;
 
-        &:hover .gray {
-            display: none;
+        &:hover {
+            color: white;
+            border-color: white;
         }
 
         .gray {
-            color: white;
+            color: @dark;
         }
     }
 }
@@ -94,6 +81,7 @@ body {
     }
 }
 
+// Vertical align
 .vertical-align {
   position: relative;
   top: 50%;
