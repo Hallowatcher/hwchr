@@ -9,7 +9,17 @@ app.use(express.static(__dirname + "/public"));
 
 app.get("/",
     function (req, res) {
-        res.render("index");
+        res.render("index", {current: "home"});
+    });
+
+app.get("/about",
+    function (req, res) {
+        res.render("index", {current: "about"});
+    });
+
+app.get("/projects",
+    function (req, res) {
+        res.render("index", {current: "projects"});
     });
 
 app.listen(3000,
