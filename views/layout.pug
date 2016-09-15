@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title hallowatcher
+    link(rel="stylesheet" type="text/css" href="/stylesheets/style.css")
+    meta(name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=.5")
+  
+  - var menu = { "home": "/", "about": "/about", "projects": "/projects" };
+
+  body
+    div#content
+      block content
+
+    div#footer
+      ul#nav
+        each val, key in menu
+          li
+            if page === key
+              a.selected(href=val)= key
+            else
+              a(href=val)= key
+
+      button#logo h#[span.gray allo]w#[span.gray at]ch#[span.gray e]r
