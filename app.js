@@ -9,17 +9,17 @@ app.use(express.static(__dirname + "/public"));
 
 app.get("/",
     function (req, res) {
-        res.render("index", { page: "home" });
+        res.render("hwchr/home", { page: "home" });
     });
 
 app.get("/about",
     function (req, res) {
-        res.render("index", { page: "about" });
+        res.render("hwchr/about", { page: "about" });
     });
 
 app.get("/projects",
     function (req, res) {
-        res.render("index", { page: "projects" });
+        res.render("hwchr/projects", { page: "projects" });
     });
 
 app.listen(3000,
