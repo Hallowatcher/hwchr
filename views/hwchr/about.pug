@@ -1,4 +1,13 @@
 extends layout
 
 block content
-  p about
+  -
+    function getAge(birthday) {
+      var ageDif = Date.now() - birthday.getTime();
+      var ageDate = new Date(ageDif);
+      return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
+  
+  div.card
+    h2 Hi!
+    p My name is Uwe Wiemer and I'm currently #{getAge(new Date(1997, 12, 10))} years old
