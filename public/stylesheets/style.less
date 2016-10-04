@@ -32,7 +32,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    width: 600px;
+    max-width: 800px;
+    width: calc(100vw - 15px);
     flex-grow: 1;
     margin: 0 auto;
     text-align: center;
@@ -40,6 +41,8 @@ body {
 
     #title {
         font-size: 96px;
+        font-weight: 400;
+        font-family: "Lato", sans-serif;
     }
 
     #line {
@@ -75,11 +78,25 @@ body {
 .card {
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 30px 10%;
     box-sizing: border-box;
     background-color: white;
     color: black;
     text-align: left;
+    font-family: "Lato", sans-serif;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    text-align: justify;
+
+    h2 {
+        font-size: 40px;
+    }
+
+    p {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 
 #footer {
