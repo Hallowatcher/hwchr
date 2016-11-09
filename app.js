@@ -1,11 +1,12 @@
 ﻿const express = require("express");
+const path = require("path");
 const app = express();
 const lessMiddleware = require("less-middleware");
 
-app.set("views", __dirname + "\\views");
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
-app.use(lessMiddleware(__dirname + "/public"));
-app.use(express.static(__dirname + "/public"));
+app.use(lessMiddleware(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", function (req, res) {
     res.render("hwchr/home", { page: "home" });
